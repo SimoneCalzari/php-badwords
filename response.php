@@ -1,7 +1,7 @@
 <?php 
 
 $text_received = $_GET['text'];
-$word_received = $_GET['word'];
+$word_received = trim($_GET['word']);
 $text_modified = str_replace($word_received, '***', $text_received);
 
 ?>
