@@ -3,7 +3,7 @@
 $text_received = $_GET['text'];
 $word_received = $_GET['word'];
 $text_modified = str_replace($word_received, '***', $text_received);
-// var_dump($_GET);
+
 ?>
 
 <!DOCTYPE html>
@@ -15,12 +15,12 @@ $text_modified = str_replace($word_received, '***', $text_received);
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
+
     <h1>Risposta</h1>
-    <p>Il testo inviato è <?php echo $text_received; ?></p>
+    <p>Il testo inviato è: <?php echo $text_received; ?></p>
     <p>Il testo inviato è lungo <?php echo strlen($text_received); ?> caratteri</p>
-    <p>Il testo censurato è <?php echo $text_modified; ?></p>
-    <p>Il testo censurato è <?php echo strlen($text_modified); ?> caratteri</p>
-    <p>Prova debbuger <?php echo $ciao; ?></p>
+    <p>Il testo censurato è: <?php echo $text_modified; ?></p>
+    <p>Il testo censurato è lungo <?php echo strlen($text_modified); ?> caratteri</p>
 
   </body>
 </html>
