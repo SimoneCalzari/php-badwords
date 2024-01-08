@@ -3,8 +3,7 @@
 $text_received = $_GET['text'];
 $word_received = $_GET['word'];
 $text_modified = str_replace($word_received, '***', $text_received);
-
-
+// var_dump($_GET);
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +12,7 @@ $text_modified = str_replace($word_received, '***', $text_received);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Response BadWords</title>
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <h1>Risposta</h1>
@@ -20,6 +20,7 @@ $text_modified = str_replace($word_received, '***', $text_received);
     <p>Il testo inviato è lungo <?php echo strlen($text_received); ?> caratteri</p>
     <p>Il testo censurato è <?php echo $text_modified; ?></p>
     <p>Il testo censurato è <?php echo strlen($text_modified); ?> caratteri</p>
+    <p>Prova debbuger <?php echo $ciao; ?></p>
 
   </body>
 </html>
